@@ -25,10 +25,16 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-
+          
       - name: Build project
         run: |
           npm run build  # This will now work since the Node.js version is updated
+
+      - name: Upload GitHub Pages Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages
+          path: ./dist  # or the folder where your build output is located
 
   deploy:
     needs: build
@@ -37,6 +43,11 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact-name: github-pages  # Reference the artifact you uploaded
