@@ -20,43 +20,26 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.20.8'
+          node-version: '18.20.8'  # Update to a compatible Node.js version
 
       - name: Install dependencies
-        run: |
-          npm install
+        run: npm install
 
       - name: Build project
-        run: |
-          npm run build  # Ensure this creates your build output in ./dist
-
-      - name: List the contents of the dist folder
-        run: ls -R ./dist  # List all files in the dist folder
-
-      - name: Check artifact size
-        run: du -sh ./dist  # Output the size of the dist directory
-
-      - name: Find symlinks in the build folder
-        run: find ./dist -type l  # Look for symlinks in the build output folder
-
-      - name: Upload GitHub Pages Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: github-pages
-          path: ./dist  # Adjust to your build folder
+        run: npm run build  # This will now work since the Node.js version is updated
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Upload GitHub Pages Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-pages  # Ensure this matches the artifact name in deploy step
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: github-pages  # Ensure this matches the uploaded artifact name
+          artifact_name: github-pages  # This should match the name above
