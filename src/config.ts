@@ -16,21 +16,21 @@ export const siteConfig = {
       name: "Low-Latency Trading Simulator",
       description:
         "Developed a UDP market-data publisher and multi-threaded engine for simulating trades and orders with high performance and accuracy.",
-      link: "https://github.com/yourprofile/low-latency-trading-simulator", // Update this with the link to your project
+      link: "https://github.com/ali-soomro/Trading-Simulator", // Update this with the link to your project
       skills: ["C++", "TCP/UDP Sockets", "GoogleTest", "CMake", "TypeScript", "React"],
     },
     {
       name: "Transfer Learning for Robustness of LLMs",
       description:
         "Led research projects using transfer learning to improve the robustness of language models on sentiment analysis tasks. Implemented cross-validation strategies for robust model evaluation.",
-      link: "https://github.com/yourprofile/transfer-learning-llms", // Update this with the link to your project
+      link: "https://github.com/ali-soomro/NLP-Large-Language-Models", // Update this with the link to your project
       skills: ["Python", "NumPy", "PyTorch", "Matplotlib", "nohub"],
     },
     {
       name: "Benchmarking Fuzzers for API Misuses",
       description:
         "Developed a fuzzer to detect API misuse using open-source libraries. Evaluated the performance of fuzzers using FuzzBench and correlated with misusage metrics.",
-      link: "https://github.com/yourprofile/fuzzbench-api-misuse", // Update this with the link to your project
+      link: "https://github.com/ali-soomro/FuzzBench-Experiments", // Update this with the link to your project
       skills: ["C", "C++", "FuzzBench", "GitHub Codespaces", "Python", "Bash", "libxml2"],
     },
   ],
