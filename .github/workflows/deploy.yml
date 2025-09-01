@@ -2,8 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]  # Trigger deployment on push to the main branch
-  workflow_dispatch:  # Allows manual triggering of the workflow
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.20.8'  # Update to a compatible Node.js version
+          node-version: '18.20.8'
 
       - name: Install dependencies
         run: |
@@ -28,22 +28,25 @@ jobs:
 
       - name: Build project
         run: |
-          npm run build  # This should create your build output (usually in `dist/` or `build/`)
+          npm run build  # Ensure this creates your build output in ./dist
+
+      - name: List the contents of the dist folder
+        run: ls -R ./dist  # List all files in the dist folder
+
+      - name: Check artifact size
+        run: du -sh ./dist  # Output the size of the dist directory
+
+      - name: Find symlinks in the build folder
+        run: find ./dist -type l  # Look for symlinks in the build output folder
 
       - name: Upload GitHub Pages Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: github-pages  # This is the artifact name
-          path: ./dist  # Adjust to your build folder (e.g., dist/, build/)
-
-      - name: Check artifact size
-        run: du -sh ./dist  # Check if your build is under GitHub's artifact size limit
-
-      - name: Find symlinks in the build folder
-        run: find ./dist -type l  # Make sure there are no symlinks in the build folder
+          name: github-pages
+          path: ./dist  # Adjust to your build folder
 
   deploy:
-    needs: build  # Make sure the build job runs first
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
