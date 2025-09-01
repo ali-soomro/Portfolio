@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]  # Adjust as needed
+    branches: [main]  # Assuming the main branch is used for production
   workflow_dispatch:
 
 permissions:
@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.20.8'  # Ensure compatibility with Astro
+          node-version: '18.20.8'  # Update to a compatible Node.js version
 
       - name: Install dependencies
         run: |
@@ -28,22 +28,15 @@ jobs:
 
       - name: Build project
         run: |
-          npm run build  # Runs `astro build`
-
-      - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: github-pages
-          path: ./dist  # Ensure this matches the folder where Astro outputs the build
+          npm run build  # This will now work since the Node.js version is updated
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages  # This is the artifact name to deploy
