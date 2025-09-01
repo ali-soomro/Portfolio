@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Or the version that matches your app's requirements
+          node-version: '18.20.8'  # Update to a compatible Node.js version
 
       - name: Install dependencies
         run: |
@@ -28,7 +28,7 @@ jobs:
 
       - name: Build project
         run: |
-          npm run build  # This should generate a build folder with the final assets
+          npm run build  # This will now work since the Node.js version is updated
 
   deploy:
     needs: build
@@ -41,4 +41,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          folder: ./build  # Make sure to deploy the build folder
+          folder: ./dist  # Assuming Astro builds to the 'dist' folder
