@@ -1,91 +1,61 @@
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
+  name: "Ali Soomro",
+  title: "Software Engineer",
+  description: "Portfolio website of Ali Soomro",
   accentColor: "#1d4ed8",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "ali.career@proton.me",
+    linkedin: "https://linkedin.com/in/ali-soomro", // Update this with your LinkedIn URL
+    github: "https://github.com/ali-soomro", // Update this with your GitHub URL
   },
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+    "I am a Software Engineer with a strong background in mathematical computation, having worked on low-latency trading simulators and large-scale system architectures. I have experience with C++, Python, and various frameworks, and I focus on developing scalable, efficient, and robust systems. I also lead research projects to improve the robustness of AI models using transfer learning and adversarial testing.",
+  skills: ["C++", "Python", "SQL", "GoogleTest", "TypeScript", "React", "TensorFlow", "Docker", "AWS", "Linux"],
   projects: [
     {
-      name: "AI Dev Roundup Newsletter",
+      name: "Low-Latency Trading Simulator",
       description:
-        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Developed a UDP market-data publisher and multi-threaded engine for simulating trades and orders with high performance and accuracy.",
+      link: "https://github.com/yourprofile/low-latency-trading-simulator", // Update this with the link to your project
+      skills: ["C++", "TCP/UDP Sockets", "GoogleTest", "CMake", "TypeScript", "React"],
     },
     {
-      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
+      name: "Transfer Learning for Robustness of LLMs",
       description:
-        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Led research projects using transfer learning to improve the robustness of language models on sentiment analysis tasks. Implemented cross-validation strategies for robust model evaluation.",
+      link: "https://github.com/yourprofile/transfer-learning-llms", // Update this with the link to your project
+      skills: ["Python", "NumPy", "PyTorch", "Matplotlib", "nohub"],
     },
     {
-      name: "ExtensionKit",
+      name: "Benchmarking Fuzzers for API Misuses",
       description:
-        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
-      link: "https://extensionkit.io/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Developed a fuzzer to detect API misuse using open-source libraries. Evaluated the performance of fuzzers using FuzzBench and correlated with misusage metrics.",
+      link: "https://github.com/yourprofile/fuzzbench-api-misuse", // Update this with the link to your project
+      skills: ["C", "C++", "FuzzBench", "GitHub Codespaces", "Python", "Bash", "libxml2"],
     },
   ],
   experience: [
     {
-      company: "Tech Company",
-      title: "Senior Software Engineer",
-      dateRange: "Jan 2022 - Present",
+      company: "Afiniti",
+      title: "Software Engineer (part-time)",
+      dateRange: "Jun 2021 - Feb 2024",
+      location: "London, United Kingdom",
       bullets: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Reduced API response times by 40% through optimization",
-        "Mentored team of 5 junior developers",
-      ],
-    },
-    {
-      company: "Startup Inc",
-      title: "Full Stack Developer",
-      dateRange: "Jun 2020 - Dec 2021",
-      bullets: [
-        "Built and launched MVP product from scratch using React and Node.js",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Collaborated with product team to define technical requirements",
-      ],
-    },
-    {
-      company: "Digital Agency",
-      title: "Frontend Developer",
-      dateRange: "Aug 2018 - May 2020",
-      bullets: [
-        "Developed responsive web applications for 20+ clients",
-        "Improved site performance scores by 35% on average",
-        "Introduced modern JavaScript frameworks to legacy codebases",
+        "Developed and maintained multiple C++ microservices within a shared memory architecture.",
+        "Integrated watchdog, oversight, and telemetry into microservices, improving monitoring coverage by 90%.",
+        "Optimized and developed core business logic, including sequential tie breaking and bucketing algorithms.",
+        "Increased code coverage for a legacy service from 2% to 75%.",
       ],
     },
   ],
   education: [
     {
-      school: "University Name",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
+      school: "University College London",
+      degree: "MEng Mathematical Computation",
+      dateRange: "Graduating November 2024",
       achievements: [
-        "Graduated Magna Cum Laude with 3.8 GPA",
-        "Dean's List all semesters",
-        "President of Computer Science Club",
-      ],
-    },
-    {
-      school: "Online Platform",
-      degree: "Full Stack Development Certificate",
-      dateRange: "2019",
-      achievements: [
-        "Completed 500+ hours of coursework",
-        "Built 10+ portfolio projects",
-        "Specialized in React and Node.js",
+        "Invited to publish research paper on software engineering under supervision of SSE and SOLAR.",
+        "Master’s level average: 80.2%",
       ],
     },
   ],
