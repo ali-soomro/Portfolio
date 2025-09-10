@@ -60,7 +60,7 @@ export const siteConfig = {
     },
     
     {
-      school: "Relevant Courses (AI/ML)",
+      school: "Relevant Courses",
       degree: "AI & Machine Learning",
       dateRange: "",
       achievements: [
@@ -72,6 +72,19 @@ export const siteConfig = {
         "Applied Machine Learning",
         "Statistical Natural Language Processing",
         "Applied Deep Learning"
+      ],
+    },
+
+    
+    {
+      school: "Relevant Courses",
+      degree: "Software Engineering",
+      dateRange: "",
+      achievements: [
+        "Data Structures and Algorithms",
+        "Computer Architecture and Concurrency",
+        "Operating Systems",
+        "System Design",
       ],
     },
   ],
