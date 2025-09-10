@@ -51,11 +51,27 @@ export const siteConfig = {
   education: [
     {
       school: "University College London",
-      degree: "MEng Mathematical Computation",
-      dateRange: "Graduating November 2024",
+      degree: "MEng Mathematical Computation (1st Class Honours/GPA 4.0)",
+      dateRange: "November 2024",
       achievements: [
         "Invited to publish research paper on software engineering under supervision of SSE and SOLAR.",
         "Master’s level average: 80.2%",
+      ],
+    },
+    
+    {
+      school: "Relevant Courses (AI/ML)",
+      degree: "AI & Machine Learning",
+      dateRange: "",
+      achievements: [
+        "Foundations of Artificial Intelligence",
+        "Machine Learning for Domain Specialisists",
+        "Machine Learning for Visual Computing",
+        "AI For Sustainable Development",
+        "AI For Biomedicine and Healthcare",
+        "Applied Machine Learning",
+        "Statistical Natural Language Processing",
+        "Applied Deep Learning"
       ],
     },
   ],
